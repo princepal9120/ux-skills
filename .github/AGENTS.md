@@ -37,6 +37,7 @@ Specialized design skills are available in .github/copilot/skills/:
 - **strategize** —  Frames product design problems before solutions exist.
 - **transpose** —  Rethinks experiences for different platforms and contexts — not just resizing, but reconceiving.
 - **ux-personas** — Create detailed, research-based UX personas for product and experience design.
+- **ux-skills** —  Entry point for the UX Skills pack (Intent + Awesome UX).
 - **ux-storyboard** — Create UX storyboards from scratch, from user research, or from existing journey maps.
 
 ## Core Principles

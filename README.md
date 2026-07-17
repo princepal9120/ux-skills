@@ -1,200 +1,233 @@
 # UX Skills
 
-**One install. Full UX practice for AI agents.**
+**UX strategy + AI product design skills for AI harnesses.**
 
-Strategy, research, journeys, accessibility, ethics — plus AI product design and visual craft.
+Install, set context, then run one command — same packaging model as [Impeccable](https://impeccable.style/docs/).
 
-Built from the best of:
-
-| Source | What you get |
-|--------|----------------|
-| [ghaida/intent](https://github.com/ghaida/intent) | Design-with-Intent system: 16 strategy skills, anti-pattern catalog, 6 specialist agents, deep references |
-| [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) | AI product patterns (governors, trust, inputs…) + craft, personas, prioritization, process tactics |
-
-See [CREDITS.md](CREDITS.md) for full provenance.
+Intent-depth strategy (research, journeys, a11y, ethics) **plus** Awesome UX AI product patterns and craft.
 
 ---
 
-## Install (everyone)
+## Start with `/ux-skills`
 
-Works with **Claude Code, Cursor, Codex, OpenCode**, and [many more](https://skills.sh) via the open skills CLI:
+1. **01 Install** — `npx ux-skills install`  
+   Run from the project root (or use `--scope=global`), then reload your agent.
+
+2. **02 Set context** — `/ux-skills init`  
+   Creates `UX-CONTEXT.md` (users, constraints, ethics, success).
+
+3. **03 Try it** — `/journey signup` or `/evaluate` or `/ai-governors`  
+   Point it at a real flow or screen.
 
 ```bash
+npx ux-skills install
+# non-interactive:
+npx ux-skills install -y --providers=claude,cursor,codex --scope=project --agents
+```
+
+Update later:
+
+```bash
+npx ux-skills update
+```
+
+List vocabulary:
+
+```bash
+npx ux-skills help
+```
+
+---
+
+## Full session path
+
+| Phase | Command | What it does |
+|-------|---------|--------------|
+| Context | `/ux-skills init` | Project UX context |
+| Plan | `/strategize` · `/investigate` | Frame problem with evidence |
+| Design | `/journey` · `/organize` · `/articulate` | Flows, IA, words |
+| AI product | `/ai-governors` · `/ai-inputs` · `/ai-trust-builders` | Control, trust, inputs |
+| Review | `/evaluate` · `/include` · `/fortify` | Quality, a11y, edge cases |
+| Craft | `/craft` · `/cognitive-load-conversion` | Visual craft + load |
+| Ship | `/specify` | Engineering handoff |
+
+Stuck? `/philosopher`. Metrics? `/measure`.
+
+---
+
+## Choose a command
+
+### Start
+
+| Command | Use when |
+|---------|----------|
+| `/ux-skills` | Route / next-step recommendation |
+| `/ux-skills init` | First run — write `UX-CONTEXT.md` |
+| `/intent` | Principles, anti-pattern catalog, full routing |
+
+### Strategy & research
+
+| Command | Use when |
+|---------|----------|
+| `/strategize` | Frame the problem before solutions |
+| `/investigate` | Research plan, interviews, synthesis |
+| `/blueprint` | Service maps, systems, dependencies |
+| `/double-diamond` | Discover → Define → Develop → Deliver |
+| `/empathy-mapping` | Says / Thinks / Does / Feels |
+| `/ux-personas` | Research-based personas |
+| `/feature-prioritization` | Weighted prioritization matrix |
+
+### Experience design
+
+| Command | Use when |
+|---------|----------|
+| `/journey` | End-to-end flows & multi-channel journeys |
+| `/organize` | IA, navigation, taxonomy |
+| `/articulate` | UX writing, voice, microcopy |
+| `/ux-storyboard` | Scenario storyboards |
+| `/like-wish-what-if` | Critique / retro framework |
+
+### AI product design
+
+| Command | Use when |
+|---------|----------|
+| `/ai-governors` | Human-in-the-loop control |
+| `/ai-identifiers` | AI name, look, personality |
+| `/ai-inputs` | How users instruct the AI |
+| `/ai-trust-builders` | Consent, disclosure, trust |
+| `/ai-tuners` | User-configurable AI behavior |
+| `/ai-wayfinders` | Blank-slate onboarding |
+
+Or invoke agent **`@atlas`** for the whole AI suite.
+
+### Quality & craft
+
+| Command | Use when |
+|---------|----------|
+| `/evaluate` | Heuristic + anti-pattern audit |
+| `/fortify` | Empty, error, offline, edge cases |
+| `/include` | Accessibility as design discipline |
+| `/general-design-review` | Compact multi-framework review |
+| `/craft` | 12 visual-craft rules |
+| `/cognitive-load-conversion` | Cut form/flow load |
+| `/persuasive-ux` | Fogg tools (ethics-checked) |
+
+### Adapt · think · handoff
+
+| Command | Use when |
+|---------|----------|
+| `/transpose` | Cross-platform adaptation |
+| `/localize` | Cultural / linguistic adaptation |
+| `/measure` | HEART, experiments, ethical metrics |
+| `/philosopher` | Sit with the problem |
+| `/storytelling` | Narrative for design work |
+| `/specify` | Specs & eng handoff |
+
+**33 skills total** (Intent 16 + Awesome UX 16 + this router).
+
+---
+
+## Install options
+
+### Option 1: CLI (recommended)
+
+```bash
+npx ux-skills install
+```
+
+Detects Claude Code, Cursor, Codex (`.agents`), Gemini, GitHub Copilot, OpenCode.  
+Flags: `--providers=claude,cursor` · `--scope=project|global` · `--agents` · `--force` · `-y`
+
+### Option 2: Git submodule + link
+
+```bash
+git submodule add https://github.com/princepal9120/ux-skills .ux-skills
+npx ux-skills link --source=.ux-skills --providers=claude,cursor
+```
+
+### Option 3: Plugin / skills CLI
+
+```bash
+# Open agent skills ecosystem
 npx skills add princepal9120/ux-skills --all
-```
 
-Install only what you need:
-
-```bash
-# List skills
-npx skills add princepal9120/ux-skills --list
-
-# Intent core only (examples)
-npx skills add princepal9120/ux-skills -s intent -s journey -s evaluate -s include
-
-# AI product suite
-npx skills add princepal9120/ux-skills -s ai-governors -s ai-trust-builders -s ai-inputs -s ai-wayfinders
-```
-
-### Claude Code plugin
-
-```text
+# Claude Code marketplace
 /plugin marketplace add princepal9120/ux-skills
 ```
 
-Then open `/plugin` and install **ux-skills**. You get slash commands + agents (Noor, Ember, Wren, Vigil, Rune, Sage, Atlas).
-
-### Manual / local
+### Option 4: Manual copy
 
 ```bash
-git clone https://github.com/princepal9120/ux-skills.git
-cd ux-skills
-npx skills add . --all
-# or for Claude Code skills dir only:
-# cp -R skills/* ~/.claude/skills/
+git clone https://github.com/princepal9120/ux-skills
+cp -R ux-skills/skills/* ~/.claude/skills/
+cp -R ux-skills/agents/* ~/.claude/agents/   # optional
 ```
 
 ---
 
-## What's inside
+## Agents
 
-### 32 skills
-
-#### Foundation (Intent)
-
-| Skill | Use when |
-|-------|----------|
-| `intent` | Set context, principles, anti-patterns, route to specialists |
-| `strategize` | Frame the problem before solutions |
-| `investigate` | Plan/run research and synthesis |
-| `blueprint` | Service maps, systems, dependencies |
-| `journey` | End-to-end flows and multi-channel journeys |
-| `organize` | IA, navigation, taxonomy |
-| `articulate` | UX writing, voice, microcopy |
-| `evaluate` | Heuristic + anti-pattern audit |
-| `fortify` | Edge cases, empty/error/offline states |
-| `include` | Accessibility as design discipline |
-| `transpose` | Cross-platform adaptation |
-| `localize` | Cultural / linguistic adaptation |
-| `measure` | HEART, experiments, ethical metrics |
-| `philosopher` | Sit with the problem; expand thinking |
-| `storytelling` | Narrative structure for design work |
-| `specify` | Engineering handoff specs |
-
-#### Extensions (Awesome UX)
-
-| Skill | Use when |
-|-------|----------|
-| `ai-governors` | Human-in-the-loop control for AI actions |
-| `ai-identifiers` | AI name, look, personality |
-| `ai-inputs` | How users prompt / instruct AI |
-| `ai-trust-builders` | Consent, disclosure, trust signals |
-| `ai-tuners` | User-configurable AI behavior |
-| `ai-wayfinders` | Onboarding out of the blank slate |
-| `craft` | 12 visual-craft rules (UI polish) |
-| `cognitive-load-conversion` | Cut form/flow cognitive load |
-| `double-diamond` | Discover → Define → Develop → Deliver |
-| `empathy-mapping` | Says / Thinks / Does / Feels |
-| `ux-personas` | Research-based personas |
-| `ux-storyboard` | Scenario storyboards |
-| `feature-prioritization` | Weighted prioritization matrix |
-| `like-wish-what-if` | Critique / retro framework |
-| `general-design-review` | Compact multi-framework review |
-| `persuasive-ux` | Fogg tools — **ethics-checked** via Intent catalog |
-
-### 7 agents
-
-| Agent | Role | Skills |
-|-------|------|--------|
-| **Noor** | Entry / context / ethics routing | `intent` |
-| **Ember** | Strategy + research | `strategize` + `investigate` |
-| **Wren** | Experience design | `journey` + `organize` + `articulate` |
-| **Vigil** | Quality + a11y + resilience | `evaluate` + `fortify` + `include` |
-| **Rune** | Engineering handoff | `specify` |
-| **Sage** | Expansive thinking | `philosopher` |
-| **Atlas** | AI product design | all `ai-*` skills |
+| Agent | Skills |
+|-------|--------|
+| **Noor** | `/intent` — context + ethics |
+| **Ember** | strategy + research |
+| **Wren** | journey + organize + articulate |
+| **Vigil** | evaluate + fortify + include |
+| **Rune** | specify |
+| **Sage** | philosopher |
+| **Atlas** | all `ai-*` skills |
 
 ---
 
-## How to use (decision tree)
+## Why both Intent and Awesome UX?
+
+| | Intent | Awesome UX | **This pack** |
+|--|--------|------------|----------------|
+| Strategy / ethics / a11y | Deep | Light | Intent |
+| AI product patterns | Thin | Strong | Awesome |
+| Visual craft rules | — | `craft` | Included |
+| Install UX | Plugin + skills | Shell script | **`npx ux-skills install`** (Impeccable-style) |
+
+Duplicates dropped on purpose (`accessibility` → `/include`, etc.). See [CREDITS.md](CREDITS.md).
+
+---
+
+## Useful pairs
+
+| Start with | Then |
+|------------|------|
+| `/strategize` | `/investigate` → `/journey` |
+| `/evaluate` | `/fortify` / `/include` / `/articulate` |
+| `/ai-governors` | `/ai-trust-builders` → `/ai-inputs` |
+| `/journey` | `/craft` → `/specify` |
+| `/ux-skills init` | `/intent` or `/strategize` |
+
+---
+
+## Package layout
 
 ```
-I have a design challenge
-│
-├─ Set project context / ethics
-│  └─ /intent  (or @noor)
-│
-├─ Don't know the problem yet
-│  └─ /strategize + /investigate  (or @ember)
-│
-├─ Design the experience
-│  └─ /journey + /organize + /articulate  (or @wren)
-│
-├─ AI feature (control, trust, identity, inputs)
-│  └─ /ai-governors … /ai-wayfinders  (or @atlas)
-│
-├─ Does this work? For everyone?
-│  └─ /evaluate + /fortify + /include  (or @vigil)
-│
-├─ Polish the UI surface
-│  └─ /craft + /cognitive-load-conversion
-│
-├─ Ready for engineering
-│  └─ /specify  (or @rune)
-│
-└─ Stuck / need expansion
-   └─ /philosopher  (or @sage)
+skills/           # source skills (SKILL.md) — all harnesses
+agents/           # Claude Code subagents
+cli/              # npx ux-skills installer
+.claude-plugin/   # Claude marketplace manifest
+.cursor/rules/    # generated Cursor rules (./build.sh)
+.github/          # Copilot instructions (./build.sh)
 ```
 
-More detail: [HOW-TO-USE.md](HOW-TO-USE.md)
-
----
-
-## Why this package
-
-| Intent alone | Awesome UX alone | **UX Skills (this repo)** |
-|--------------|------------------|---------------------------|
-| Deep strategy, ethics, a11y | Fast tactical prompts | Both |
-| Weak on AI product UX | Strong AI pattern library | Atlas + 6 AI skills |
-| Full agent system + multi-platform packaging | Simple install script | `npx skills add` + Claude plugin + Cursor/Copilot build |
-| No visual craft rules | `craft` + load/conversion | Included |
-
-Duplicates removed on purpose (prefer Intent depth for a11y, journeys, heuristics, research methods).
-
----
-
-## Build distributions (maintainers)
-
-Claude Code reads `skills/` and `agents/` directly.
-
-For Cursor + GitHub Copilot rules:
+Maintainers:
 
 ```bash
-./build.sh
-```
-
-Release (semver tag + push):
-
-```bash
-./release.sh 1.0.1
+./build.sh                 # refresh Cursor + Copilot dists
+./release.sh 1.1.0         # version bump + tag
+npm publish                # optional npm registry
 ```
 
 ---
 
 ## License
 
-**CC0 1.0 Universal** — public domain dedication for this distribution.
+**CC0 1.0** — public domain dedication for this distribution.  
+Intent is CC0 (Ghaida Zahran). Awesome UX extensions attributed to Tommy Jepsen — keep CREDITS when forking.
 
-- Intent foundation is CC0 by Ghaida Zahran.
-- Extension skill bodies are adapted from Tommy Jepsen's Awesome UX Skills; please keep [CREDITS.md](CREDITS.md) when you fork.
-
----
-
-## Contributing
-
-PRs welcome.
-
-1. Skills live in `skills/<name>/SKILL.md` with YAML frontmatter (`name`, `description`, `version`, `user-invocable`).
-2. Prefer extending Intent routing in `skills/intent/SKILL.md` over duplicating domains.
-3. Run `./build.sh` before release if Cursor/Copilot outputs changed.
-4. Update `CREDITS.md` when adding third-party material.
+Packaging pattern inspired by [Impeccable](https://impeccable.style) / [pbakaus/impeccable](https://github.com/pbakaus/impeccable).
