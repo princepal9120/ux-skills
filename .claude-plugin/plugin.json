@@ -1,0 +1,25 @@
+{
+  "name": "ux-skills",
+  "description": "UX Skills — Intent design strategy (16 skills) plus AI product design and craft extensions. Installable for Claude Code, Cursor, Codex, and more.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Prince Pal"
+  },
+  "homepage": "https://github.com/princepal9120/ux-skills",
+  "repository": "https://github.com/princepal9120/ux-skills",
+  "license": "CC0-1.0",
+  "keywords": [
+    "design",
+    "ux",
+    "strategy",
+    "research",
+    "accessibility",
+    "ai-product-design",
+    "information-architecture",
+    "content-strategy",
+    "service-design",
+    "measurement",
+    "ethics",
+    "craft"
+  ]
+}

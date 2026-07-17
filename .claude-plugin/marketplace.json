@@ -1,0 +1,36 @@
+{
+  "name": "ux-skills",
+  "metadata": {
+    "description": "UX Skills. Intent foundation + AI product design & craft extensions — full UX practice for AI agents."
+  },
+  "owner": {
+    "name": "Prince Pal"
+  },
+  "plugins": [
+    {
+      "name": "ux-skills",
+      "description": "UX Skills — Design with Intent (strategy, research, journeys, accessibility, ethics) plus AI product design patterns and visual craft skills. 32 skills, 7 agents.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Prince Pal"
+      },
+      "source": "./",
+      "category": "design",
+      "homepage": "https://github.com/princepal9120/ux-skills",
+      "tags": [
+        "design",
+        "ux",
+        "strategy",
+        "research",
+        "accessibility",
+        "ai-product-design",
+        "information-architecture",
+        "content-strategy",
+        "service-design",
+        "measurement",
+        "ethics",
+        "craft"
+      ]
+    }
+  ]
+}
