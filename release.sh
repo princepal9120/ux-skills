@@ -5,7 +5,7 @@
 # Example: ./release.sh 1.1.0
 #
 # This script:
-#   1. Updates version in all source skill files and plugin manifests
+#   1. Updates package and plugin manifests
 #   2. Rebuilds platform distributions (Claude Code, Cursor, Copilot)
 #   3. Commits the version bump
 #   4. Creates a git tag (v<version>)
@@ -70,17 +70,22 @@ echo ""
 
 echo -e "${GREEN}[1/5] Bumping versions${NC}"
 
-# Source skill files (frontmatter: version: X.Y.Z)
-for skill_file in "$SCRIPT_DIR"/skills/*/SKILL.md; do
-    sed -i '' "s/^version: $CURRENT$/version: $VERSION/" "$skill_file"
-done
-skill_count=$(ls "$SCRIPT_DIR"/skills/*/SKILL.md 2>/dev/null | wc -l | tr -d ' ')
-echo "  Updated $skill_count source skill files"
-
-# Plugin manifests (JSON: "version": "X.Y.Z")
-sed -i '' "s/\"version\": \"$CURRENT\"/\"version\": \"$VERSION\"/" "$SCRIPT_DIR/.claude-plugin/plugin.json"
-sed -i '' "s/\"version\": \"$CURRENT\"/\"version\": \"$VERSION\"/" "$SCRIPT_DIR/.claude-plugin/marketplace.json"
-echo "  Updated plugin.json + marketplace.json"
+# Keep every distributable manifest in sync. Source SKILL.md files deliberately
+# use portable Agent Skills frontmatter (name + description only), so they do
+# not carry release versions.
+node - "$SCRIPT_DIR" "$VERSION" <<'NODE'
+const { readFileSync, writeFileSync } = require('node:fs');
+const { join } = require('node:path');
+const [root, version] = process.argv.slice(2);
+for (const relative of ['package.json', '.claude-plugin/plugin.json', '.claude-plugin/marketplace.json']) {
+  const path = join(root, relative);
+  const json = JSON.parse(readFileSync(path, 'utf8'));
+  if (relative.endsWith('marketplace.json')) json.plugins.forEach(plugin => { plugin.version = version; });
+  else json.version = version;
+  writeFileSync(path, `${JSON.stringify(json, null, 2)}\n`);
+}
+NODE
+echo "  Updated package.json + plugin manifests"
 
 # =============================================================================
 # Rebuild distributions
@@ -96,6 +101,8 @@ echo -e "${GREEN}[2/5] Rebuilding distributions${NC}"
 # =============================================================================
 
 echo -e "${GREEN}[3/5] Validating plugin${NC}"
+npm --prefix "$SCRIPT_DIR" test
+npm --prefix "$SCRIPT_DIR" pack --dry-run
 if ! command -v claude >/dev/null 2>&1; then
     echo -e "${RED}Error:${NC} 'claude' CLI not found — cannot validate plugin before release."
     echo "Install Claude Code or re-run after ensuring 'claude' is on PATH."
@@ -112,13 +119,13 @@ echo -e "${GREEN}[4/5] Committing${NC}"
 # Stage explicit paths only. Avoids `git add -A` accidentally bundling stray
 # untracked files (editor crashfiles, screenshots, local notes) into a tagged
 # release commit.
-git add skills/ agents/ .claude-plugin/ .cursor/ .github/ hooks/ 2>/dev/null || true
+git add skills/ agents/ .claude-plugin/ .cursor/ .github/ hooks/ test/ package.json 2>/dev/null || true
 # Re-add the script files themselves if version bumping touched them (it doesn't
 # today, but be defensive in case release.sh ever bumps its own constants).
-git add build.sh release.sh README.md 2>/dev/null || true
+git add build.sh release.sh README.md HOW-TO-USE.md 2>/dev/null || true
 
 # Verify only expected paths are staged. Bail if anything unexpected shows up.
-unexpected=$(git diff --cached --name-only | grep -vE '^(skills/|agents/|\.claude-plugin/|\.cursor/|\.github/|hooks/|build\.sh|release\.sh|README\.md)' || true)
+unexpected=$(git diff --cached --name-only | grep -vE '^(skills/|agents/|\.claude-plugin/|\.cursor/|\.github/|hooks/|test/|build\.sh|release\.sh|README\.md|HOW-TO-USE\.md|package\.json)' || true)
 if [ -n "$unexpected" ]; then
     echo -e "${RED}Error:${NC} unexpected files staged for the release commit:"
     echo "$unexpected" | sed 's/^/  /'
@@ -126,7 +133,13 @@ if [ -n "$unexpected" ]; then
     exit 1
 fi
 
-git commit -m "Release $TAG"
+git commit -m "Prepare UX Skills $TAG for reliable agent installs
+
+Constraint: Release artifacts must keep npm and plugin versions aligned.
+Confidence: high
+Scope-risk: narrow
+Directive: Keep Agent Skills frontmatter portable; do not add release version fields.
+Tested: npm test; npm pack --dry-run; plugin validation"
 
 # =============================================================================
 # Tag — push gated behind confirmation

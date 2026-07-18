@@ -1,8 +1,7 @@
 ---
 name: ai-identifiers
-description: Apply the AI Identifiers framework to design or audit the distinct, brand-level qualities that define how an AI presents itself across a product. Use this skill whenever someone is designing or reviewing the visual, verbal, or behavioral identity of an AI — including questions like "what should we call our AI", "how should our AI look", "what color should we use for AI features", "how do we make our AI feel distinct", "what icons should represent AI actions", "how do we give our AI a personality", "should our AI have an avatar", or any request about making an AI feel coherent, recognizable, and on-brand. Also trigger when the user is building a new AI feature and hasn't yet thought about how it should present itself — proactively raising identifiers as a design consideration is part of this skill's job.
-version: 1.0.0
-user-invocable: true
+description: >
+  Apply the AI Identifiers framework to design or audit the distinct, brand-level qualities that define how an AI presents itself across a product. Use this skill whenever someone is designing or reviewing the visual, verbal, or behavioral identity of an AI — including questions like "what should we call our AI", "how should our AI look", "what color should we use for AI features", "how do we make our AI feel distinct", "what icons should represent AI actions", "how do we give our AI a personality", "should our AI have an avatar", or any request about making an AI feel coherent, recognizable, and on-brand. Also trigger when the user is building a new AI feature and hasn't yet thought about how it should present itself — proactively raising identifiers as a design consideration is part of this skill's job.
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

@@ -1,6 +1,7 @@
 ---
 name: empathy-mapping
-description: Create, facilitate, and critique empathy maps for UX research and design thinking. Use this skill
+description: >
+  Create, facilitate, and critique empathy maps for UX research and design thinking. Use this skill
   whenever a user wants to build an empathy map, understand their users more deeply, synthesize
   qualitative research into a shared team artifact, or translate user interviews into structured
   insights. Trigger on phrases like "create an empathy map", "map out what users think and feel",
@@ -9,8 +10,6 @@ description: Create, facilitate, and critique empathy maps for UX research and d
   quadrants. Also trigger when users share raw interview transcripts, survey responses, or user
   research notes and want to make sense of them. Always use this skill before attempting to create
   any empathy map content from scratch.
-version: 1.0.0
-user-invocable: true
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

@@ -1,6 +1,7 @@
 ---
 name: like-wish-what-if
-description: Give and structure feedback using the "I like, I wish, What if" (IL/IW/WI) design
+description: >
+  Give and structure feedback using the "I like, I wish, What if" (IL/IW/WI) design
   critique framework from the Stanford d.school. Use this skill whenever a user wants constructive
   feedback on a design, prototype, feature, flow, document, or team process — or wants to run a
   feedback session or retrospective. Trigger on phrases like "give me feedback", "critique this
@@ -8,8 +9,6 @@ description: Give and structure feedback using the "I like, I wish, What if" (IL
   "how can we improve this", or when a user shares work-in-progress and asks for reactions.
   Also trigger when a user has raw feedback from others and wants it organized into something
   actionable. Always use this skill to structure critique instead of giving unorganized opinions.
-version: 1.0.0
-user-invocable: true
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

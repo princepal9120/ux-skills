@@ -8,8 +8,6 @@ description: >
   existing product's UX, or when the user asks about design intent,
   user experience strategy, ethical design, dark patterns, or design
   systems thinking.
-version: 1.5.0
-user-invocable: true
 ---
 
 # Intent

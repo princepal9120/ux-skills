@@ -9,8 +9,8 @@
   "plugins": [
     {
       "name": "ux-skills",
-      "description": "UX Skills — Design with Intent (strategy, research, journeys, accessibility, ethics) plus AI product design patterns and visual craft skills. 32 skills, 7 agents.",
-      "version": "1.1.0",
+      "description": "UX Skills — product strategy, journeys, accessibility, ethical AI patterns, and design craft. 33 skills, 7 agents.",
+      "version": "1.2.0",
       "author": {
         "name": "Prince Pal"
       },

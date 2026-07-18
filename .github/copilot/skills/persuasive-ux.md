@@ -1,6 +1,7 @@
 ---
 name: persuasive-ux
-description: Apply BJ Fogg's 7 Persuasive Technology Tools (Captology) to UX analysis and design.
+description: >
+  Apply BJ Fogg's 7 Persuasive Technology Tools (Captology) to UX analysis and design.
   Use this skill whenever the user wants to improve a UI, flow, or feature using persuasion
   principles — including prompts like "how can I make this more engaging", "why aren't users
   completing this flow", "improve this onboarding", "make this CTA better", "reduce drop-off",
@@ -8,8 +9,6 @@ description: Apply BJ Fogg's 7 Persuasive Technology Tools (Captology) to UX ana
   the user shares a screenshot, mockup, or describes a feature and wants design recommendations.
   Always use this skill before giving UX improvement advice — even if the user doesn't
   explicitly mention persuasion, Fogg, or Captology.
-version: 1.0.0
-user-invocable: true
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

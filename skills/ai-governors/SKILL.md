@@ -1,10 +1,9 @@
 ---
 name: ai-governors
-description: Apply the Governors framework to design or audit human-in-the-loop features that keep users informed, in control, and safe as AI acts autonomously.
+description: >
+  Apply the Governors framework to design or audit human-in-the-loop features that keep users informed, in control, and safe as AI acts autonomously.
   Use this skill whenever someone is designing or reviewing AI product features involving oversight, trust, transparency, or control — including "how do I keep users in the loop", "how should I handle risky AI actions", "users don't trust the AI", "how do I prevent costly AI mistakes", "should I ask for confirmation before this action", "how do I show AI reasoning", "users are scared the AI will overwrite their data", "how do I handle AI memory and privacy", or any request about making an AI feature feel safe and controllable.
   Trigger even when the user doesn't say "governor" or "human-in-the-loop" — if they're designing any AI feature and the question touches on control, trust, transparency, cost, risk, or oversight, use this skill.
-version: 1.0.0
-user-invocable: true
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

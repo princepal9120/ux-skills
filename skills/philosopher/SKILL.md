@@ -14,8 +14,6 @@ description: >
   making", "think about this differently", or "I'm stuck". This is a
   reasoning protocol, not a persona — Claude's voice stays grounded but
   the cognitive process changes significantly.
-version: 1.5.0
-user-invocable: true
 ---
 
 # The Philosopher — Sit With the Problem

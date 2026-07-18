@@ -1,6 +1,7 @@
 ---
 name: ux-storyboard
-description: Create UX storyboards from scratch, from user research, or from existing journey maps.
+description: >
+  Create UX storyboards from scratch, from user research, or from existing journey maps.
   Use this skill whenever a user wants to create a storyboard, visualize a user scenario,
   illustrate how a user interacts with a product, or communicate a UX story to a team or
   stakeholders. Also trigger when the user asks to "sketch a user flow", "show how a user
@@ -8,8 +9,6 @@ description: Create UX storyboards from scratch, from user research, or from exi
   to present research findings in a visual, narrative format. Even if the user doesn't say
   "storyboard" explicitly — if they want to show a sequence of steps a user takes, trigger
   this skill.
-version: 1.0.0
-user-invocable: true
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

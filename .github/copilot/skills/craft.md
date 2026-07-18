@@ -1,8 +1,7 @@
 ---
 name: craft
-description: Apply 12 concrete visual-craft rules to UI code and designs — bans on gradients, glow effects, transition:all, placeholder text, and visual monotony, plus disciplines for stacking contexts (isolation:isolate), neutrals, spacing, typography, elevation, interactive states, and motion. Use this skill whenever the user is writing or reviewing frontend/UI code or a high-fidelity design and wants it to look polished, intentional, or "less AI-generated" — including requests like "make this look better", "polish this UI", "review my CSS", "why does this look generic", "tighten up this design", or any craft-level (not UX-flow-level) critique of a component, page, or stylesheet.
-version: 1.0.0
-user-invocable: true
+description: >
+  Apply 12 concrete visual-craft rules to UI code and designs — bans on gradients, glow effects, transition:all, placeholder text, and visual monotony, plus disciplines for stacking contexts (isolation:isolate), neutrals, spacing, typography, elevation, interactive states, and motion. Use this skill whenever the user is writing or reviewing frontend/UI code or a high-fidelity design and wants it to look polished, intentional, or "less AI-generated" — including requests like "make this look better", "polish this UI", "review my CSS", "why does this look generic", "tighten up this design", or any craft-level (not UX-flow-level) critique of a component, page, or stylesheet.
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

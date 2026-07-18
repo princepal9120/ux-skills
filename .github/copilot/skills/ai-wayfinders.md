@@ -1,6 +1,7 @@
 ---
 name: ai-wayfinders
-description: Apply Wayfinder patterns to design or improve AI onboarding, discoverability,
+description: >
+  Apply Wayfinder patterns to design or improve AI onboarding, discoverability,
   and first-interaction flows in any product. Use this skill whenever the user wants to add AI
   to a product surface, reduce blank-slate anxiety, help users discover what the AI can do,
   improve an initial CTA or prompt input, add suggestions or templates, design a gallery, add
@@ -9,8 +10,6 @@ description: Apply Wayfinder patterns to design or improve AI onboarding, discov
   "how do we show what the AI can do", "add some example prompts", or "improve onboarding to
   our AI feature". Wayfinders are: Initial CTA, Example Gallery, Suggestions, Templates,
   Nudges, Follow-ups, Prompt Details, and Randomize.
-version: 1.0.0
-user-invocable: true
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

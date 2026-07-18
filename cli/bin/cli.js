@@ -39,6 +39,7 @@ Examples:
   npx ux-skills install -y --scope=global --providers=claude
   npx ux-skills update
   npx ux-skills link --source=. --providers=claude,cursor
+  npx skills add princepal9120/ux-skills --all --full-depth
 
 After install, reload your agent, then:
   /ux-skills init          # set project UX context

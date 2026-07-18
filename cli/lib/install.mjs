@@ -24,6 +24,21 @@ const PKG_ROOT = join(__dirname, '..', '..');
 const SKILLS_SRC = join(PKG_ROOT, 'skills');
 const AGENTS_SRC = join(PKG_ROOT, 'agents');
 
+function optionValue(args, index, option) {
+  const value = args[index + 1];
+  if (!value || value.startsWith('-')) {
+    throw new Error(`${option} requires a value`);
+  }
+  return value;
+}
+
+function csv(value) {
+  return value
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean);
+}
+
 function parseArgs(args) {
   const opts = {
     yes: false,
@@ -34,25 +49,21 @@ function parseArgs(args) {
     skills: null,
     source: null,
   };
-  for (const a of args) {
+  for (let index = 0; index < args.length; index++) {
+    const a = args[index];
     if (a === '-y' || a === '--yes') opts.yes = true;
     else if (a === '--force') opts.force = true;
     else if (a === '--agents') opts.agents = true;
+    else if (a === '--scope') opts.scope = optionValue(args, ++index, '--scope');
     else if (a.startsWith('--scope=')) opts.scope = a.slice('--scope='.length);
-    else if (a.startsWith('--providers='))
-      opts.providers = a
-        .slice('--providers='.length)
-        .split(',')
-        .map(s => s.trim())
-        .filter(Boolean);
-    else if (a.startsWith('--skills='))
-      opts.skills = a
-        .slice('--skills='.length)
-        .split(',')
-        .map(s => s.trim())
-        .filter(Boolean);
+    else if (a === '--providers') opts.providers = csv(optionValue(args, ++index, '--providers'));
+    else if (a.startsWith('--providers=')) opts.providers = csv(a.slice('--providers='.length));
+    else if (a === '--skills') opts.skills = csv(optionValue(args, ++index, '--skills'));
+    else if (a.startsWith('--skills=')) opts.skills = csv(a.slice('--skills='.length));
+    else if (a === '--source') opts.source = optionValue(args, ++index, '--source');
     else if (a.startsWith('--source=')) opts.source = a.slice('--source='.length);
     else if (a === '--help' || a === '-h') opts.help = true;
+    else throw new Error(`Unknown option: ${a}. Run: npx ux-skills --help`);
   }
   return opts;
 }
@@ -327,6 +338,9 @@ export async function runLink(args) {
   if (providers.length === 0) providers = ['claude', 'agents'];
 
   const scope = opts.scope || 'project';
+  if (scope !== 'project' && scope !== 'global') {
+    throw new Error('--scope must be project or global');
+  }
   const skillNames = listSkillNames(skillsSrc);
   const version = readPkgVersion();
 

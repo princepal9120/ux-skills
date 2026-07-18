@@ -1,8 +1,7 @@
 ---
 name: ai-trust-builders
-description: Apply AI Trust Builder design patterns to give users confidence that an AI product's results are ethical, accurate, and trustworthy. Use this skill whenever a designer, PM, or developer wants to make their AI product feel safer, more transparent, or more accountable. Trigger on: "make users feel safe", "add a disclaimer", "handle user data", "label AI-generated content", "privacy mode", "disclose AI is being used", "watermark AI outputs", "make the AI more transparent", "audit trail for AI", "user consent for recording", or any request touching AI accountability, privacy, explainability, or honest representation of what AI is doing. Also use when auditing an existing AI product for trust signals or when building new AI features into a non-AI-native product. Covers seven patterns: Caveat, Consent, Data Ownership, Disclosure, Footprints, Incognito Mode, and Watermark.
-version: 1.0.0
-user-invocable: true
+description: >
+  Apply AI Trust Builder design patterns to give users confidence that an AI product's results are ethical, accurate, and trustworthy. Use this skill whenever a designer, PM, or developer wants to make their AI product feel safer, more transparent, or more accountable. Trigger on: "make users feel safe", "add a disclaimer", "handle user data", "label AI-generated content", "privacy mode", "disclose AI is being used", "watermark AI outputs", "make the AI more transparent", "audit trail for AI", "user consent for recording", or any request touching AI accountability, privacy, explainability, or honest representation of what AI is doing. Also use when auditing an existing AI product for trust signals or when building new AI features into a non-AI-native product. Covers seven patterns: Caveat, Consent, Data Ownership, Disclosure, Footprints, Incognito Mode, and Watermark.
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

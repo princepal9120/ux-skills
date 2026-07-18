@@ -1,8 +1,7 @@
 ---
 name: ux-personas
-description: Create detailed, research-based UX personas for product and experience design. Use this skill whenever a user wants to create, improve, or critique personas — including requests like "help me define our users", "create a persona for X", "build user profiles for our product", "we need to define our target audience", or "turn our research into personas". Also trigger when a user shares user research, interview notes, survey data, or user segments and wants to turn that into design-ready personas. Always use this skill before attempting to write any persona content from scratch.
-version: 1.0.0
-user-invocable: true
+description: >
+  Create detailed, research-based UX personas for product and experience design. Use this skill whenever a user wants to create, improve, or critique personas — including requests like "help me define our users", "create a persona for X", "build user profiles for our product", "we need to define our target audience", or "turn our research into personas". Also trigger when a user shares user research, interview notes, survey data, or user segments and wants to turn that into design-ready personas. Always use this skill before attempting to write any persona content from scratch.
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

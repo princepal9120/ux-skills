@@ -10,8 +10,6 @@ description: >
   interactions, designing navigation, or asking "how should the user experience X?"
   Use this skill broadly — any time someone is working through how a user moves through
   a product experience, this skill applies.
-version: 1.5.0
-user-invocable: true
 ---
 
 # Journey

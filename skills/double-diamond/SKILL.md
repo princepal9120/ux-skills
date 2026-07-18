@@ -1,8 +1,7 @@
 ---
 name: double-diamond
-description: Guide teams and individuals through the Double Diamond design thinking framework (Discover, Define, Develop, Deliver). Use this skill whenever someone mentions design process, product discovery, problem framing, ideation, prototyping, or user research — even without saying "Double Diamond". Trigger on: "where do I start with this design problem", "how do we approach building X", "help me structure our design process", "we need to do discovery", "we're in the ideation phase", "how do we validate our solution", "I have a design challenge", "I'm not sure what problem we're solving", "walk me through the design process", "help me run a design sprint". Also trigger when a non-designer or stakeholder wants to understand the design process or where they fit in. If someone describes a product problem without knowing how to approach it, proactively offer to guide them through this framework.
-version: 1.0.0
-user-invocable: true
+description: >
+  Guide teams and individuals through the Double Diamond design thinking framework (Discover, Define, Develop, Deliver). Use this skill whenever someone mentions design process, product discovery, problem framing, ideation, prototyping, or user research — even without saying "Double Diamond". Trigger on: "where do I start with this design problem", "how do we approach building X", "help me structure our design process", "we need to do discovery", "we're in the ideation phase", "how do we validate our solution", "I have a design challenge", "I'm not sure what problem we're solving", "walk me through the design process", "help me run a design sprint". Also trigger when a non-designer or stakeholder wants to understand the design process or where they fit in. If someone describes a product problem without knowing how to approach it, proactively offer to guide them through this framework.
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

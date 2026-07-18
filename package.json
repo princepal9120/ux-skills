@@ -1,9 +1,13 @@
 {
   "name": "ux-skills",
-  "version": "1.1.0",
-  "description": "UX skills for AI harnesses — Intent strategy + AI product design & craft. Install like Impeccable.",
+  "version": "1.2.0",
+  "description": "Product UX strategy, AI product design, accessibility, and craft skills for AI coding agents.",
   "author": "Prince Pal",
   "license": "CC0-1.0",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/princepal9120"
+  },
   "homepage": "https://github.com/princepal9120/ux-skills",
   "repository": {
     "type": "git",
@@ -32,6 +36,7 @@
     "cli/",
     "skills/",
     "agents/",
+    "skills.sh.json",
     "LICENSE",
     "CREDITS.md",
     "README.md"
@@ -41,6 +46,10 @@
   },
   "scripts": {
     "start": "node cli/bin/cli.js",
-    "test": "node cli/bin/cli.js help"
+    "test": "node --test",
+    "check": "npm run test && ./build.sh && npm pack --dry-run"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

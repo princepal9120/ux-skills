@@ -7,8 +7,6 @@ description: >
   skills", "set up UX context", "which UX skill", "start design work", or
   needs a next-step recommendation across strategy, journeys, AI product
   design, accessibility, and handoff.
-version: 1.1.0
-user-invocable: true
 ---
 
 # UX Skills

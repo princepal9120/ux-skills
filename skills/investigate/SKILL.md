@@ -8,8 +8,6 @@ description: >
   creating surveys, synthesizing research findings, "what should we research?",
   "how do I test this?", "write an interview guide", or any question about 
   understanding users through evidence.
-version: 1.5.0
-user-invocable: true
 ---
 
 # Investigate

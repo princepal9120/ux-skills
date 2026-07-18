@@ -1,6 +1,7 @@
 ---
 name: ai-inputs
-description: Design and implement AI input patterns for products. Use this skill whenever
+description: >
+  Design and implement AI input patterns for products. Use this skill whenever
   the user wants to add an AI-powered input mechanism to their product, improve
   how users interact with AI features, decide which input pattern fits a use
   case, or audit existing AI input UX. Trigger on phrases like "how should users
@@ -10,8 +11,6 @@ description: Design and implement AI input patterns for products. Use this skill
   request about how users should interact with or direct AI in the product.
   Always use this skill before designing or recommending any AI interaction
   surface.
-version: 1.0.0
-user-invocable: true
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

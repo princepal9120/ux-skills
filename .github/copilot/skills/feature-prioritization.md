@@ -1,8 +1,7 @@
 ---
 name: feature-prioritization
-description: Apply structured prioritization matrix techniques to rank features, ideas, or design decisions by two weighted criteria (e.g. user impact vs. effort, feasibility vs. ROI). Use this skill whenever a user wants to prioritize features, compare design options, rank backlog items, decide what to build next, run a prioritization workshop, or make a structured UX or product decision. Trigger on phrases like "help me prioritize", "what should we build first", "rank these features", "should we focus on X or Y", "prioritize the backlog", "run a prioritization exercise", "impact vs effort", or any request to choose between competing options in a structured way.
-version: 1.0.0
-user-invocable: true
+description: >
+  Apply structured prioritization matrix techniques to rank features, ideas, or design decisions by two weighted criteria (e.g. user impact vs. effort, feasibility vs. ROI). Use this skill whenever a user wants to prioritize features, compare design options, rank backlog items, decide what to build next, run a prioritization workshop, or make a structured UX or product decision. Trigger on phrases like "help me prioritize", "what should we build first", "rank these features", "should we focus on X or Y", "prioritize the backlog", "run a prioritization exercise", "impact vs effort", or any request to choose between competing options in a structured way.
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.

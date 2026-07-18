@@ -1,8 +1,7 @@
 ---
 name: general-design-review
-description: Run a compact UX, product, and AI design review by combining the existing UX skills into one lighter guide. Use when reviewing a UI, flow, feature idea, AI product experience, research artifact, onboarding, prioritization decision, or design process. Focus on the highest-impact issues and recommendations, not exhaustive framework detail.
-version: 1.0.0
-user-invocable: true
+description: >
+  Run a compact UX, product, and AI design review by combining the existing UX skills into one lighter guide. Use when reviewing a UI, flow, feature idea, AI product experience, research artifact, onboarding, prioritization decision, or design process. Focus on the highest-impact issues and recommendations, not exhaustive framework detail.
 ---
 
 > **Provenance:** Adapted from [tommyjepsen/awesome-ux-skills](https://github.com/tommyjepsen/awesome-ux-skills) by Tommy Jepsen, integrated into this package.
